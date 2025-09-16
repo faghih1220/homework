@@ -9,7 +9,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     with conn:
         while True:
              data = conn.recv(1024)
-            
             #ساعت
              if data =='time':
                conn.sendall(datetime.datetime.now().strftime("%H:%M:%S")) 

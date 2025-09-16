@@ -7,7 +7,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         while True:
-           # conn.sendall(b"Hi :")
-            data = conn.recv(1024)
-            conn.sendall(data)
-            
+            s.sendall(b"Hi ")
+            data = s.recv(1024)
+            conn .sendall(s)
+    

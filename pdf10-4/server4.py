@@ -8,6 +8,6 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     with conn:
         while True:
            # conn.sendall(b"Hi :")
-            data = conn.recv(1024)
+            data = conn.recv(1024)[::-1]
             conn.sendall(data)
             
